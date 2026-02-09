@@ -1243,28 +1243,28 @@ export default function AuroraApp() {
         </div>
 
         {/* Content */}
-        <div style={{ position: "relative", zIndex: 1, maxWidth: 720, padding: "0 32px", textAlign: "center" }}>
-          <div style={{ animation: "glow 4s ease-in-out infinite", fontSize: 52, fontWeight: 300, letterSpacing: 16, marginBottom: 4 }}>
+        <div style={{ position: "relative", zIndex: 1, maxWidth: 720, width: "100%", padding: "0 20px", textAlign: "center", overflowY: "auto", maxHeight: "100vh", paddingTop: "clamp(20px, 5vh, 60px)", paddingBottom: 40 }}>
+          <div style={{ animation: "glow 4s ease-in-out infinite", fontSize: "clamp(28px, 7vw, 52px)", fontWeight: 300, letterSpacing: "clamp(6px, 2vw, 16px)", marginBottom: 4 }}>
             AURORA
           </div>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.55)", letterSpacing: 6, marginBottom: 44, animation: "fadeIn 1s ease-out 0.2s both" }}>
+          <div style={{ fontSize: "clamp(9px, 2vw, 12px)", color: "rgba(255,255,255,0.55)", letterSpacing: "clamp(3px, 1vw, 6px)", marginBottom: "clamp(20px, 4vh, 44px)", animation: "fadeIn 1s ease-out 0.2s both" }}>
             SPACE WEATHER SONIFIED
           </div>
 
           {/* Description */}
-          <div style={{ animation: "fadeIn 1s ease-out 0.4s both", marginBottom: 40, lineHeight: 2 }}>
-            <p style={{ fontSize: 15, color: "rgba(255,255,255,0.6)", marginBottom: 18, letterSpacing: 0.3 }}>
+          <div style={{ animation: "fadeIn 1s ease-out 0.4s both", marginBottom: "clamp(20px, 3vh, 40px)", lineHeight: 2 }}>
+            <p style={{ fontSize: "clamp(12px, 3vw, 15px)", color: "rgba(255,255,255,0.6)", marginBottom: 18, letterSpacing: 0.3 }}>
               Right now, the Sun is bombarding Earth with a stream of charged particles travelling at hundreds of kilometres per second. When this solar wind hits our magnetic field, it funnels down toward the poles and ignites the atmosphere — creating the aurora.
             </p>
-            <p style={{ fontSize: 15, color: "rgba(255,255,255,0.55)", letterSpacing: 0.3 }}>
+            <p style={{ fontSize: "clamp(12px, 3vw, 15px)", color: "rgba(255,255,255,0.55)", letterSpacing: 0.3 }}>
               This experience pulls the last 7 days of real space weather data from NOAA's deep-space satellites and replays it as light and sound. Every particle you see, every note you hear, is driven by what actually happened between the Sun and Earth over the past week. You'll see quiet periods, sudden storms, and everything in between — all from real measurements.
             </p>
           </div>
 
           {/* Data mapping legend */}
-          <div style={{ animation: "fadeIn 1s ease-out 0.6s both", marginBottom: 40 }}>
+          <div style={{ animation: "fadeIn 1s ease-out 0.6s both", marginBottom: "clamp(20px, 3vh, 40px)" }}>
             <div style={{ fontSize: 10, color: "rgba(68,255,170,0.6)", letterSpacing: 3, marginBottom: 14, textTransform: "uppercase" }}>How the data becomes the aurora</div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px 36px", textAlign: "left", maxWidth: 540, margin: "0 auto" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "10px 36px", textAlign: "left", maxWidth: 540, margin: "0 auto" }}>
               {[
                 ["Solar Wind Speed", "Aurora brightness & particle flow", "#ff6b8a"],
                 ["Plasma Density", "Plucked notes — more particles, more plucks", "#44ddff"],
